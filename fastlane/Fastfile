@@ -174,7 +174,11 @@ platform :ios do
         scheme: 'Mattermost',
         configuration: config_mode,
         workspace: './ios/Mattermost.xcworkspace',
-        export_method: method
+        export_method: method,
+        skip_profile_detection: true,
+        export_options: {
+            signingStyle: 'manual'
+        }
     )
   end
 
